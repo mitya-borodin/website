@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 import s from './App.css';
 
 const ContextType = {
-  // Enables critical path CSS rendering
-  // https://github.com/kriasoft/isomorphic-style-loader
   insertCss: PropTypes.func.isRequired,
 };
 
@@ -29,7 +27,9 @@ class App extends Component {
 
   render () {
     return (
-      <div>Will be http://borodin.site as soon as possible. </div>
+      <div>
+        <span>Will be http://borodin.site as soon as possible.</span>
+      </div>
     );
   }
 }

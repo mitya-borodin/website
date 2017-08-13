@@ -4,7 +4,7 @@
   "description": "This is my personal site powered by isomorphic react app.",
   "version": "1.0.0",
   "engines": {
-    "node": ">=8",
+    "node": ">=6",
     "npm": ">=5.3"
   },
   "homepage": "http://github.com/mitya-borodin/personal-website",
@@ -21,13 +21,13 @@
     "url": "http://borodin.site"
   },
   "scripts": {
-    "start": "react-app -i",
-    "start:debug": "react-app -i -d",
-    "start:analyze": "react-app -i -a -d",
-    "start:release": "react-app -i -r",
-    "build": "react-app build -i -d -a",
-    "release": "react-app build -i -r",
-    "release:analyze": "react-app build -i -r -a -d",
+    "start": "react-app --onlyServer -i",
+    "start:debug": "react-app --onlyServer -i -d",
+    "start:analyze": "react-app --onlyServer -i -a -d",
+    "start:release": "react-app --onlyServer -i -r",
+    "build": "react-app build --onlyServer -i -d -a",
+    "release": "react-app build --onlyServer -i -r",
+    "release:analyze": "react-app build --onlyServer -i -r -a -d",
     "postinstall": "npm i -g rearguard@^1"
   },
   "dependencies": {
