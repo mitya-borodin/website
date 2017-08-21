@@ -1,9 +1,9 @@
 import express from 'express';
 import App from 'pages/App';
 import path from 'path';
-import React from 'react';
-import ReactDOM from 'react-dom/server';
+import InfernoServer from 'inferno-server';
 import Html from 'stubComponents/Html.jsx';
+import assets from './assets.json'; // eslint-disable-line import/no-unresolved
 import config from './config.json'; // eslint-disable-line import/no-unresolved
 
 const app = express();
@@ -30,17 +30,23 @@ app.get('*', async (req, res, next) => {
           // eslint-disable-next-line no-underscore-dangle
           styles.forEach(style => css.add(style._getCss()));
         },
+        redirect: res.redirect.bind(res),
       };
 
       const data = {};
 
-      data.children = ReactDOM.renderToString(<App context={ context }/>);
+      data.children = InfernoServer.renderToString(<App context={context}/>);
 
       data.styles = [
         { id: 'css', cssText: [...css].join('') },
       ];
 
-      const html = `<!doctype html>${ReactDOM.renderToStaticMarkup(<Html { ...data } />)}`;
+      data.scripts = [
+        assets.vendor.js,
+        assets.main.js,
+      ];
+
+      const html = `<!doctype html>${InfernoServer.renderToString(<Html { ...data } />)}`;
 
       pageCache.set(req.url, html);
 
