@@ -14,12 +14,12 @@ const html = ({styles, scripts, children}) => (
     }
   </head>
   <body>
-    <div id="REACT_APP" dangerouslySetInnerHTML={ { __html: children } }/>
-    {
-      scripts.map((script) => <script key={script} src={script}/>)
-    }
+  <div id="REACT_APP" dangerouslySetInnerHTML={{__html: children}}/>
+  {
+    scripts.map((script) => <script key={script} src={script}/>)
+  }
   </body>
   </html>
-);
+)
 
-export default html;
+export default html

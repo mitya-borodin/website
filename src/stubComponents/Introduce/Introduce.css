@@ -1,0 +1,23 @@
+@import 'vars/index.css';
+
+.root {
+  height: 100vh;
+  background-image: linear-gradient(to top, #0e65e5, rgba(174, 124, 249, 0.8)), linear-gradient(#2057eb, #2057eb);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 87rem 0 0 0;
+}
+
+.contact {
+  width: 235rem;
+  height: 61rem;
+  background-color: var(--color-blue);
+  border-radius: 50rem;
+  line-height: 61rem;
+  text-align: center;
+  font-size: 14rem;
+  font-weight: 600;
+  color: var(--color-about-bg);
+  cursor: pointer;
+}

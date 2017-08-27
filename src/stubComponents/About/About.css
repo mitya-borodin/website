@@ -1,0 +1,9 @@
+@import "vars/index.css";
+
+.root {
+  width: 50vw;
+  height: 100vh;
+  font-size: 18rem;
+  background-color: var(--color-about-bg);
+}
+
