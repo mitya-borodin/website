@@ -1,0 +1,49 @@
+{
+  "context": "src",
+  "entry": "index.jsx",
+  "output": {
+    "path": "dist",
+    "publicPath": "/"
+  },
+  "modules": [
+    "src"
+  ],
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Opera versions",
+    "last 3 Safari versions",
+    "last 2 Firefox versions",
+    "last 4 Edge versions",
+    "last 4 iOS versions",
+    "last 2 Samsung versions",
+    "last 2 ChromeAndroid versions",
+    "last 2 FirefoxAndroid versions",
+    "last 2 Android versions"
+  ],
+  "proxy": {
+    "/api": "http://localhost:12000"
+  },
+  "isomorphic": {
+    "entry": "server.js",
+    "publicDirName": "public"
+  },
+  "css": {
+    "isolation": true,
+    "reset": {
+      "all": "initial",
+      "display": "block",
+      "boxSizing": "border-box",
+      "font-family": "Avenir Next, -apple-system, BlinkMacSystemFonts, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+      "font-size": "inherit"
+    },
+    "postCssPlugins": "postCssPlugins.js"
+  },
+  "typescript": {
+    "configPath": "tsconfig.json",
+    "showConfigForIDE": false,
+    "config": {
+      "compilerOptions": {},
+      "compileOnSave": false
+    }
+  }
+}

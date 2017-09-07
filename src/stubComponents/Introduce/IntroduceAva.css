@@ -1,0 +1,81 @@
+@import 'vars/index.css';
+
+.root {
+  width: 431rem;
+  height: 382rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 45rem;
+  margin-top: -150;
+}
+
+.root > img {
+  width: 240rem;
+  height: 240rem;
+  border: 4rem solid var(--color-about-bg);
+  border-radius: 240rem;
+  margin-bottom: 34rem;
+}
+
+.letters {
+  top: -382rem;
+  left: -95rem;
+  position: relative;
+}
+
+.letter {
+  position: absolute;
+  font-size: 48rem;
+  font-weight: 500;
+  color: var(--color-about-bg);
+}
+
+.circle {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  border: solid 6rem var(--color-about-bg);
+  opacity: 0.5;
+  border-radius: 20rem;
+}
+
+.curlyBraceLeft {
+  composes: letter;
+  top: 60rem;
+  left: 52rem;
+}
+
+.curlyBraceRight {
+  composes: letter;
+  top: 300rem;
+  left: 332rem;
+}
+
+.plus {
+  composes: letter;
+  left: 266rem;
+}
+
+.circleRight {
+  composes: circle;
+  top: 112rem;
+  left: 411rem;
+}
+
+.circleLeft {
+  composes: circle;
+  top: 362rem;
+  left: 121rem;
+}
+
+.rect {
+  position: absolute;
+  top: 247rem;
+  left: 0;
+  opacity: 0.5;
+  background-color: var(--color-about-bg);
+  width: 6rem;
+  height: 26rem;
+}
+
