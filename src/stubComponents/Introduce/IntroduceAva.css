@@ -7,6 +7,7 @@
   align-items: flex-end;
   justify-content: center;
   margin-bottom: 45rem;
+  margin-top: -150;
 }
 
 .root > img {

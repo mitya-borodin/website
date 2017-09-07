@@ -1,3 +1,4 @@
 :global html {
-  font-size: calc(100vw / 1440);
+  width: 100vw;
+  height: 100vh;
 }

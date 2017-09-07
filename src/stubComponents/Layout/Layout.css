@@ -1,15 +1,17 @@
 @import "vars/index.css";
 
 .root {
-  font-size: 18rem;
   display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-size: 18rem;
 }
 
 .root > div {
   width: 50%;
+  height: 100%;
 }
 
 .root {
-  width: 1440rem;
   background-color: var(--color-about-bg);
 }

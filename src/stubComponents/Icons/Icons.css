@@ -1,0 +1,21 @@
+@import "vars/index.css";
+
+.root {
+  width: 330rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 140rem;
+}
+
+.root > svg {
+  width: 30rem;
+  height: 30rem;
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.root > svg:hover {
+  fill: #BCC3F8;
+  stroke: #BCC3F8;
+  cursor: pointer;
+}

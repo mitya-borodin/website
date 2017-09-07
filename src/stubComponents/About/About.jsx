@@ -1,14 +1,15 @@
-import Component from 'inferno-component'
-import s from './About.css'
+import withStyles from 'HOC/withStyles';
+import Component from 'inferno-component';
+import s from './About.css';
 
 class About extends Component {
-  render() {
+  render () {
     return (
-      <div className={s.root}>
+      <div className={ s.root }>
         About
       </div>
-    )
+    );
   }
 }
 
-export default About
+export default withStyles(s)(About);
