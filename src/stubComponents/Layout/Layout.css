@@ -4,14 +4,10 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  font-size: 18rem;
+  background-color: var(--color-about-bg);
 }
 
 .root > div {
   width: 50%;
   height: 100%;
-}
-
-.root {
-  background-color: var(--color-about-bg);
 }

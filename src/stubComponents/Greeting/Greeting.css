@@ -1,7 +1,7 @@
 @import 'vars/index.css';
 
 .root {
-  width: 500rem;
+  width: 600rem;
   height: 104rem;
   margin-bottom: 50rem;
 
@@ -34,4 +34,18 @@
   display: block;
 }
 
-
+@media (width >= 1024px) and (width < 1440px) {
+  .root {
+    width: 430rem;
+    height: 80rem;
+    margin-bottom: 36rem;
+  }
+  .font {
+    font-size: 26rem;
+    line-height: 40rem;
+  }
+  .first > span {
+    font-size: 26rem;
+    line-height: 40rem;
+  }
+}

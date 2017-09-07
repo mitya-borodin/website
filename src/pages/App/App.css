@@ -2,3 +2,21 @@
   width: 100vw;
   height: 100vh;
 }
+
+@media (width < 1024px) {
+  :global html {
+    font-size: calc(100vw / 375);
+  }
+}
+
+@media (width>= 1024px) and (width < 1440px) {
+  :global html {
+    font-size: calc(100vw / 1024);
+  }
+}
+
+@media (width >= 1440px) {
+  :global html {
+    font-size: calc(100vw / 1440);
+  }
+}

@@ -1,0 +1,146 @@
+@import 'vars/index.css';
+
+.root {
+  width: 431rem;
+  height: 382rem;
+  margin-bottom: 45rem;
+}
+
+.root > img {
+  width: 240rem;
+  height: 240rem;
+  border: 4rem solid var(--color-about-bg);
+  border-radius: 240rem;
+  margin-bottom: 34rem;
+  position: relative;
+  left: 96rem;
+  top: 108rem;
+}
+
+.letters {
+  position: absolute;
+}
+
+.letter {
+  position: absolute;
+  font-size: 48rem;
+  font-weight: 500;
+  color: var(--color-about-bg);
+}
+
+.circle {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  border: solid 6rem var(--color-about-bg);
+  opacity: 0.5;
+  border-radius: 20rem;
+}
+
+.curlyBraceLeft {
+  composes: letter;
+  top: 60rem;
+  left: 52rem;
+}
+
+.curlyBraceRight {
+  composes: letter;
+  top: 300rem;
+  left: 332rem;
+}
+
+.plus {
+  composes: letter;
+  left: 266rem;
+}
+
+.circleRight {
+  composes: circle;
+  top: 112rem;
+  left: 411rem;
+}
+
+.circleLeft {
+  composes: circle;
+  top: 362rem;
+  left: 121rem;
+}
+
+.rect {
+  position: absolute;
+  top: 247rem;
+  left: 0;
+  opacity: 0.5;
+  background-color: var(--color-about-bg);
+  width: 6rem;
+  height: 26rem;
+}
+
+@media (width >= 1024px) and (width < 1440px) {
+  .root {
+    width: 196.7rem;
+    height: 196.7rem;
+    margin-top: 100rem;
+    margin-bottom: 80rem;
+  }
+
+  .root > img {
+    width: 196.7rem;
+    height: 196.7rem;
+    border-radius: 196.7rem;
+    left: 0;
+    top: 0;
+  }
+
+  .letters {
+    position: relative;
+    top: 98.35rem;
+    left: 98.35rem;
+  }
+
+  .curlyBraceLeft {
+    composes: letter;
+    top: -125rem;
+    left: -140rem;
+
+  }
+
+  .curlyBraceRight {
+    composes: letter;
+    top: 60rem;
+    left: 100rem;
+  }
+
+  .plus {
+    composes: letter;
+    left: 55rem;
+    top: -190rem;
+  }
+
+  .circleRight {
+    composes: circle;
+    width: 24rem;
+    height: 24rem;
+    top: -100rem;
+    left: 150rem;
+    border: solid 6rem var(--color-about-bg);
+    border-radius: 24rem;
+  }
+
+  .circleLeft {
+    composes: circle;
+    width: 24rem;
+    height: 24rem;
+    top: 130rem;
+    left: -80rem;
+    border: solid 6rem var(--color-about-bg);
+    border-radius: 24rem;
+  }
+
+  .rect {
+    top: 20rem;
+    left: -180rem;
+    width: 6rem;
+    height: 21rem;
+  }
+}

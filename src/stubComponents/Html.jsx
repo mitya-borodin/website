@@ -1,4 +1,4 @@
-const html = ({styles, scripts, children}) => (
+const html = ({ styles, scripts, children }) => (
   <html className="no-js" lang="en">
   <head>
     <meta charSet="utf-8"/>
@@ -6,20 +6,20 @@ const html = ({styles, scripts, children}) => (
     {
       styles.map(style => (
         <style
-          key={style.id}
-          id={style.id}
-          dangerouslySetInnerHTML={{__html: style.cssText}}
+          key={ style.id }
+          id={ style.id }
+          dangerouslySetInnerHTML={ { __html: style.cssText } }
         />
       ))
     }
   </head>
   <body>
-  <div id="REACT_APP" dangerouslySetInnerHTML={{__html: children}}/>
+  <div id="REACT_APP" dangerouslySetInnerHTML={ { __html: children } }/>
   {
-    scripts.map((script) => <script key={script} src={script}/>)
+    scripts.map((script) => <script key={ script } src={ script }/>)
   }
   </body>
   </html>
-)
+);
 
-export default html
+export default html;

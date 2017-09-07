@@ -6,10 +6,10 @@ const context = {
   insertCss: (...styles) => {
     // eslint-disable-next-line no-underscore-dangle
     const removeCss = styles.map(x => x._insertCss());
+
     return () => { removeCss.forEach(f => f()); };
   },
 };
-
 const run = (Component) => {
   render(<Component context={ context }/>, container);
 };
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 if (module.hot) {
   module.hot.accept('pages/App', () => {
-    console.log(App);
     run(App);
   });
 }

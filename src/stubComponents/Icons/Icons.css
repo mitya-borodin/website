@@ -19,3 +19,12 @@
   stroke: #BCC3F8;
   cursor: pointer;
 }
+
+@media (width >= 1024px) and (width < 1440px) {
+  .root {
+    width: 304rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 88rem;
+  }
+}
