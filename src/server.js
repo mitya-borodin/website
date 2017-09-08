@@ -1,4 +1,5 @@
 import express from 'express';
+import compression from 'compression';
 import InfernoServer from 'inferno-server';
 import App from 'pages/App';
 import path from 'path';
@@ -61,5 +62,7 @@ app.get('*', async (req, res, next) => {
 //
 // Launch the server
 // -----------------------------------------------------------------------------
+
+app.use(compression());
 
 app.listen(parseInt(config.port), config.host, () => console.info(config.serverWasRunDetectString));
