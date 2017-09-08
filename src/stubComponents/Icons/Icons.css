@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 140rem;
+  margin-bottom: 62.5rem;
 }
 
 .root > svg {
@@ -20,11 +21,17 @@
   cursor: pointer;
 }
 
+@media (width < 1024px) {
+  .root {
+    width: 303rem;
+    margin-top: 79rem;
+    margin-bottom: 38rem;
+  }
+}
+
 @media (width >= 1024px) and (width < 1440px) {
   .root {
     width: 304rem;
-    display: flex;
-    justify-content: space-between;
     margin-top: 88rem;
   }
 }

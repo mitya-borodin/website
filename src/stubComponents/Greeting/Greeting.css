@@ -4,7 +4,6 @@
   width: 600rem;
   height: 104rem;
   margin-bottom: 50rem;
-
 }
 
 .font {
@@ -32,6 +31,22 @@
 .second {
   composes: font;
   display: block;
+}
+
+@media (width < 1024px) {
+  .root {
+    width: 297.4rem;
+    height: 96rem;
+    margin-bottom: 35rem;
+  }
+  .font {
+    font-size: 21rem;
+    line-height: 32rem;
+  }
+  .first > span {
+    font-size: 21rem;
+    line-height: 32rem;
+  }
 }
 
 @media (width >= 1024px) and (width < 1440px) {

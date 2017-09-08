@@ -1,7 +1,7 @@
 import withStyles from 'HOC/withStyles';
 import Component from 'inferno-component';
 import s from './Ava.css';
-import avaJPG from 'static/ava2.jpg';
+import avaJPG from 'static/ava.jpg';
 
 const curlyBracesLeft = '{';
 const curlyBracesRight = '}';

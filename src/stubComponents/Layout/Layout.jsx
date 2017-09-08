@@ -27,7 +27,7 @@ class Layout extends Component {
         baseFontSize = Math.min(width / 375, height / 667);
       }
 
-      this.htmlElement.style.cssText = `font-size: ${baseFontSize}px`;
+      this.htmlElement.style.cssText = `font-size: ${baseFontSize}px; opacity: 1;`;
     }
   }
 

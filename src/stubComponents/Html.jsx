@@ -1,5 +1,5 @@
 const html = ({ styles, scripts, children }) => (
-  <html className="no-js" lang="en">
+  <html className="no-js" lang="en" style={ { opacity: 0 } }>
   <head>
     <meta charSet="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>

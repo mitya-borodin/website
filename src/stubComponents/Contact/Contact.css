@@ -18,3 +18,11 @@
   background-color: var(--color-blue-hover);
 }
 
+@media (width < 1024px) {
+  .root {
+    width: 172rem;
+    height: 40rem;
+    line-height: 40rem;
+    font-size: 12rem;
+  }
+}
