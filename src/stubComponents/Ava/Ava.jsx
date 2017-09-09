@@ -1,12 +1,27 @@
 import withStyles from 'HOC/withStyles';
 import Component from 'inferno-component';
-import s from './Ava.css';
 import avaJPG from 'static/ava.jpg';
+import executionEnvironment from 'utils/ExecutionEnvironment';
+import s from './Ava.css';
 
 const curlyBracesLeft = '{';
 const curlyBracesRight = '}';
 
 class Ava extends Component {
+  avaEl = null;
+
+  componentWillMount () {
+    if (executionEnvironment.canUseDOM) {
+      const avaImg = new Image();
+
+      avaImg.src = avaJPG;
+
+      avaImg.onload = () => {
+        this.avaEl.src = avaJPG;
+      };
+    }
+  }
+
   render () {
     return (
       <div className={ s.root }>
@@ -18,7 +33,7 @@ class Ava extends Component {
           <div className={ s.circleLeft }/>
           <div className={ s.rect }/>
         </div>
-        <img src={ avaJPG }/>
+        <img ref={ (element) => this.avaEl = element }/>
       </div>
     );
   }

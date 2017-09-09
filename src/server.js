@@ -1,5 +1,5 @@
-import express from 'express';
 import compression from 'compression';
+import express from 'express';
 import InfernoServer from 'inferno-server';
 import App from 'pages/App';
 import path from 'path';
@@ -9,6 +9,9 @@ import config from './config.json'; // eslint-disable-line import/no-unresolved
 
 const app = express();
 const pageCache = new Map();
+
+app.use(compression());
+
 //
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
@@ -62,7 +65,5 @@ app.get('*', async (req, res, next) => {
 //
 // Launch the server
 // -----------------------------------------------------------------------------
-
-app.use(compression());
 
 app.listen(parseInt(config.port), config.host, () => console.info(config.serverWasRunDetectString));

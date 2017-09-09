@@ -1,6 +1,5 @@
 import withStyles from 'HOC/withStyles';
 import Component from 'inferno-component';
-import bestBgPNG from 'static/bestBg.png';
 import bgJPG from 'static/bg.jpg';
 import bgPNG from 'static/bg.png';
 import Ava from 'stubComponents/Ava';
@@ -34,14 +33,6 @@ class Me extends Component {
 
         goodImg.onload = () => {
           this.setCSS(bgPNG);
-
-          const bestImg = new Image();
-
-          bestImg.src = bestBgPNG;
-
-          bestImg.onload = () => {
-            this.setCSS(bestBgPNG);
-          };
         };
       };
     }
