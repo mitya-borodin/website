@@ -1,15 +1,15 @@
 import withStyles from 'HOC/withStyles';
 import Component from 'inferno-component';
-import s from './About.css';
+import s from './Contact.css';
 
-class About extends Component {
+class Contact extends Component {
   render () {
     return (
       <div className={ s.root }>
-        About
+        { 'contact me now'.toLocaleUpperCase() }
       </div>
     );
   }
 }
 
-export default withStyles(s)(About);
+export default withStyles(s)(Contact);

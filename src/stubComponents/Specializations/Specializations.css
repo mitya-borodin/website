@@ -1,0 +1,94 @@
+@import "vars/index.css";
+
+.root {
+  width: 100%;
+  margin-bottom: 45rem;
+}
+
+.root > h1 {
+  font-size: 14rem;
+  font-weight: 700;
+  text-align: left;
+  color: var(--color-text-section-h1);
+  margin-bottom: 27rem;
+}
+
+.root > div {
+  display: flex;
+}
+
+.root > div > div {
+  width: 50%;
+}
+
+.specialization {
+
+}
+
+.root > div > div:global(.blue) .specialization > div {
+  background-color: var(--color-blue);
+}
+
+.root > div > div:global(.green) .specialization > div {
+  background-color: var(--color-green);
+}
+
+.root > div > div:global(.blue) .specialization li {
+  color: var(--color-blue);
+}
+
+.root > div > div:global(.green) .specialization li {
+  color: var(--color-green);
+}
+
+.specialization > div {
+  width: 119rem;
+  height: 32rem;
+  text-align: center;
+  color: white;
+  line-height: 32rem;
+  border-radius: 32rem;
+  font-size: 12rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+.specialization > ul {
+  display: block;
+  list-style-type: disc;
+  padding: 8rem 0 0 40rem;
+}
+
+.specialization li {
+  display: list-item;
+}
+
+.specialization li > span {
+  font-size: 15rem;
+  line-height: 24rem;
+  color: var(--color-text-section-p);
+}
+
+@media (width < 1024px) {
+  .root {
+    margin-bottom: 12rem;
+  }
+  .root > h1 {
+    text-align: center;
+    margin-bottom: 16rem;
+  }
+  .root > div {
+    flex-direction: column;
+  }
+
+  .root > div > div {
+    width: 100%;
+  }
+  .specialization > div {
+    margin-left: calc(50% - 58rem);
+  }
+  .specialization > ul {
+    margin-bottom: 20rem;
+    padding: 8rem 0 0 35rem;
+  }
+}

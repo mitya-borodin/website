@@ -1,17 +1,22 @@
 @import "vars/index.css";
 
 .root {
-  display: flex;
   width: 100vw;
   height: 100vh;
-  font-size: 18rem;
+  background-color: var(--color-about-bg);
 }
 
 .root > div {
   width: 50%;
   height: 100%;
+  float: left;
 }
 
-.root {
-  background-color: var(--color-about-bg);
+@media (width < 1024px) {
+  .root {
+    flex-direction: column;
+  }
+  .root > div {
+    width: 100%;
+  }
 }

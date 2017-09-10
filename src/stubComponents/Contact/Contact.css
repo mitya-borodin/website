@@ -1,0 +1,37 @@
+@import 'vars/index.css';
+
+.root {
+  width: 235rem;
+  height: 61rem;
+  background-color: var(--color-blue);
+  border-radius: 50rem;
+  line-height: 61rem;
+  text-align: center;
+  font-size: 14rem;
+  font-weight: 600;
+  color: var(--color-about-bg);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: calc(50% - 235rem / 2);
+}
+
+.root:hover {
+  cursor: pointer;
+  background-color: var(--color-blue-hover);
+}
+
+@media (width >= 1024px) and (width < 1440px) {
+  .root > div {
+    width: 500rem;
+  }
+}
+
+@media (width < 1024px) {
+  .root {
+    width: 172rem;
+    height: 40rem;
+    line-height: 40rem;
+    font-size: 12rem;
+    margin-left: calc(50% - 172rem / 2);
+  }
+}

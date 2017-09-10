@@ -1,0 +1,50 @@
+@import "vars/index.css";
+
+.root {
+  width: 100%;
+  margin-bottom: 40rem;
+}
+
+.root > h1 {
+  font-size: 14rem;
+  font-weight: 700;
+  text-align: left;
+  color: var(--color-text-section-h1);
+  margin-bottom: 19rem;
+}
+
+.root > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.root > div > a {
+  height: 32rem;
+  border-radius: 32rem;
+  background-color: var(--color-yellow);
+  text-align: center;
+  padding: 7rem 16rem 8rem;
+  font-size: 14rem;
+  font-weight: 600;
+  line-height: 19rem;
+  margin-bottom: 8rem;
+  margin-right: 8rem;
+  cursor: pointer;
+  color: var(--color-yellow-text);
+}
+
+.root > div > a:hover {
+  background-color: var(--color-yellow-hover);
+}
+
+@media (width < 1024px) {
+  .root {
+    margin-bottom: 32rem;
+  }
+  .root > h1 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,69 @@
+@import 'vars/index.css';
+
+.root {
+  width: 600rem;
+  height: 104rem;
+  margin-bottom: 50rem;
+  margin-left: calc(50% - 600rem / 2);
+}
+
+.font {
+  font-size: 32rem;
+  font-weight: 600;
+  line-height: 52.0rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.first {
+  composes: font;
+  display: block;
+}
+
+.first > span {
+  display: inline;
+  font-size: 32rem;
+  font-weight: 600;
+  line-height: 52.0rem;
+  text-align: center;
+  color: var(--color-green);
+}
+
+.second {
+  composes: font;
+  display: block;
+}
+
+@media (width < 1024px) {
+  .root {
+    width: 297.4rem;
+    height: 96rem;
+    margin-bottom: 35rem;
+    margin-left: calc(50% - 297.4rem / 2);
+  }
+  .font {
+    font-size: 21rem;
+    line-height: 32rem;
+  }
+  .first > span {
+    font-size: 21rem;
+    line-height: 32rem;
+  }
+}
+
+@media (width >= 1024px) and (width < 1440px) {
+  .root {
+    width: 430rem;
+    height: 80rem;
+    margin-bottom: 35rem;
+    margin-left: calc(50% - 430rem / 2);
+  }
+  .font {
+    font-size: 26rem;
+    line-height: 40rem;
+  }
+  .first > span {
+    font-size: 26rem;
+    line-height: 40rem;
+  }
+}

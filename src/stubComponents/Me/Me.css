@@ -1,0 +1,28 @@
+@import 'vars/index.css';
+
+.root {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #0e65e5, rgba(174, 124, 249, 0.8)), linear-gradient(#2057eb, #2057eb);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.root > div {
+  width: 600rem;
+}
+
+@media (width >= 1024px) and (width < 1440px) {
+  .root > div {
+    width: 500rem;
+  }
+}
+
+@media (width < 1024px) {
+  .root > div {
+    width: 300rem;
+  }
+}
+
