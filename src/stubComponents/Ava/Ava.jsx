@@ -24,16 +24,18 @@ class Ava extends Component {
 
   render () {
     return (
-      <div className={ s.root }>
-        <div className={ s.letters }>
-          <span className={ s.curlyBraceLeft }>{ curlyBracesLeft }</span>
-          <span className={ s.curlyBraceRight }>{ curlyBracesRight }</span>
-          <span className={ s.plus }>{ '+' }</span>
-          <div className={ s.circleRight }/>
-          <div className={ s.circleLeft }/>
-          <div className={ s.rect }/>
+      <div className={s.wrapper}>
+        <div className={ s.root }>
+          <div className={ s.letters }>
+            <span className={ s.curlyBraceLeft }>{ curlyBracesLeft }</span>
+            <span className={ s.curlyBraceRight }>{ curlyBracesRight }</span>
+            <span className={ s.plus }>{ '+' }</span>
+            <div className={ s.circleRight }/>
+            <div className={ s.circleLeft }/>
+            <div className={ s.rect }/>
+          </div>
+          <img ref={ (element) => this.avaEl = element }/>
         </div>
-        <img ref={ (element) => this.avaEl = element }/>
       </div>
     );
   }

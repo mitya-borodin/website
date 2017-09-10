@@ -41,10 +41,12 @@ class Me extends Component {
   render () {
     return (
       <div ref={ (element) => this.rootEl = element } className={ s.root }>
-        <Ava/>
-        <Greeting/>
-        <Contact/>
-        <Icons/>
+        <div>
+          <Ava/>
+          <Greeting/>
+          <Contact/>
+          <Icons/>
+        </div>
       </div>
     );
   }

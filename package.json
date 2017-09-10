@@ -39,5 +39,8 @@
     "normalize.css": "7.0.0",
     "pretty-error": "2.1.1",
     "prop-types": "15.5.10"
+  },
+  "devDependencies": {
+    "postcss-css-variables": "0.8.0"
   }
 }

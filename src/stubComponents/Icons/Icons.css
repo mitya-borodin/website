@@ -5,17 +5,17 @@
   display: flex;
   justify-content: space-between;
   margin-top: 140rem;
-  margin-bottom: 62.5rem;
+  margin-left: calc(50% - 330rem / 2);
 }
 
-.root > svg {
+.root svg {
   width: 30rem;
   height: 30rem;
   fill: #ffffff;
   stroke: #ffffff;
 }
 
-.root > svg:hover {
+.root svg:hover {
   fill: #BCC3F8;
   stroke: #BCC3F8;
   cursor: pointer;
@@ -25,7 +25,7 @@
   .root {
     width: 303rem;
     margin-top: 79rem;
-    margin-bottom: 38rem;
+    margin-left: calc(50% - 303rem / 2);
   }
 }
 
@@ -33,5 +33,6 @@
   .root {
     width: 304rem;
     margin-top: 88rem;
+    margin-left: calc(50% - 304rem / 2);
   }
 }

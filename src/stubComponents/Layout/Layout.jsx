@@ -17,6 +17,8 @@ class Layout extends Component {
     if (this.htmlElement !== null) {
       const { width, height } = this.htmlElement.getBoundingClientRect();
 
+      console.log({ width, height });
+
       let baseFontSize = width / 1440;
 
       if (width >= 1440) {
@@ -27,7 +29,7 @@ class Layout extends Component {
         baseFontSize = Math.min(width / 375, height / 667);
       }
 
-      this.htmlElement.style.cssText = `font-size: ${baseFontSize}px; opacity: 1;`;
+      this.htmlElement.style.cssText = `font-size: ${baseFontSize}px;`;
     }
   }
 

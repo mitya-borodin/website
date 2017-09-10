@@ -1,7 +1,6 @@
 @import "vars/index.css";
 
 .root {
-  display: flex;
   width: 100vw;
   height: 100vh;
   background-color: var(--color-about-bg);
@@ -10,6 +9,7 @@
 .root > div {
   width: 50%;
   height: 100%;
+  float: left;
 }
 
 @media (width < 1024px) {

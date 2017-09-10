@@ -4,6 +4,7 @@
   width: 600rem;
   height: 104rem;
   margin-bottom: 50rem;
+  margin-left: calc(50% - 600rem / 2);
 }
 
 .font {
@@ -38,6 +39,7 @@
     width: 297.4rem;
     height: 96rem;
     margin-bottom: 35rem;
+    margin-left: calc(50% - 297.4rem / 2);
   }
   .font {
     font-size: 21rem;
@@ -53,7 +55,8 @@
   .root {
     width: 430rem;
     height: 80rem;
-    margin-bottom: 36rem;
+    margin-bottom: 35rem;
+    margin-left: calc(50% - 430rem / 2);
   }
   .font {
     font-size: 26rem;

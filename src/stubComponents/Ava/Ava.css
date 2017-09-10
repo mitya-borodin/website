@@ -1,8 +1,14 @@
 @import 'vars/index.css';
 
-.root {
+.wrapper {
+  margin-left: calc(50% - 120rem);
+  padding-top: 190rem;
   margin-bottom: 70rem;
-  margin-top: 195rem;
+}
+
+.root {
+  width: 240rem;
+  height: 240rem;
   position: relative;
 }
 
@@ -15,7 +21,7 @@
 
 .letters {
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   left: 50%;
 }
 
@@ -76,13 +82,19 @@
 }
 
 @media (width < 1024px) {
+  .wrapper {
+    margin-left: calc(50% - 78.7rem);
+    margin-bottom: 60rem;
+    padding-top: 115rem;
+  }
   .root {
-    margin-bottom: 70rem;
-    margin-top: 115rem;
+    width: 157.4rem;
+    height: 157.4rem;
   }
   .root > img {
     width: 157.4rem;
     height: 157.4rem;
+    border-radius: 157.4rem;
   }
 
   .curlyBraceLeft {
@@ -132,17 +144,19 @@
 }
 
 @media (width >= 1024px) and (width < 1440px) {
-  .root {
-    margin-top: 100rem;
-    margin-bottom: 80rem;
+  .wrapper {
+    margin-left: calc(50% - 98.35rem);
+    margin-bottom: 85rem;
+    padding-top: 130rem;
   }
-
+  .root {
+    width: 196.7rem;
+    height: 196.7rem;
+  }
   .root > img {
     width: 196.7rem;
     height: 196.7rem;
     border-radius: 196.7rem;
-    left: 0;
-    top: 0;
   }
 
   .curlyBraceLeft {
@@ -160,7 +174,7 @@
   .plus {
     composes: letter;
     left: 45rem;
-    top: -185rem;
+    top: -210rem;
   }
 
   .circleRight {
