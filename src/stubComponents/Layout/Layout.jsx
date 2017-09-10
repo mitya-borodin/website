@@ -4,7 +4,7 @@ import executionEnvironment from 'utils/ExecutionEnvironment';
 import s from './Layout.css';
 
 class Layout extends Component {
-
+  
   htmlElement = null;
 
   constructor (props, context) {
@@ -16,8 +16,6 @@ class Layout extends Component {
   handleResize () {
     if (this.htmlElement !== null) {
       const { width, height } = this.htmlElement.getBoundingClientRect();
-
-      console.log({ width, height });
 
       let baseFontSize = width / 1440;
 
@@ -36,6 +34,7 @@ class Layout extends Component {
   componentWillMount () {
     if (executionEnvironment.canUseDOM) {
       this.htmlElement = document.getElementsByTagName('html')[0];
+
 
       window.addEventListener('resize', this.handleResize);
 
