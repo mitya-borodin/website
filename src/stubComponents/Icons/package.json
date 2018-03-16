@@ -1,3 +1,4 @@
 {
-  "main": "Icons.jsx"
+  "types": "Icons.tsx",
+  "main": "Icons.tsx"
 }

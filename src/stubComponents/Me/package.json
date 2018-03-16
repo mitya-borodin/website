@@ -1,3 +1,4 @@
 {
-  "main": "Me.jsx"
+  "main": "Me.tsx",
+  "types": "Me.tsx"
 }

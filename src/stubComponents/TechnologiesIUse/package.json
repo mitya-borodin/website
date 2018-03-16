@@ -1,3 +1,4 @@
 {
-  "main": "TechnologiesIUse.jsx"
+  "types": "TechnologiesIUse.tsx",
+  "main": "TechnologiesIUse.tsx"
 }

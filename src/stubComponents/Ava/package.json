@@ -1,3 +1,4 @@
 {
-  "main": "Ava.jsx"
+  "main": "Ava.tsx",
+  "types": "Ava.tsx"
 }

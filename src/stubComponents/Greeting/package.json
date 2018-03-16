@@ -1,3 +1,4 @@
 {
-  "main": "Greeting.jsx"
+  "main": "Greeting.tsx",
+  "types": "Greeting.tsx"
 }

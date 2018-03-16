@@ -1,3 +1,4 @@
 {
-  "main": "Specializations.jsx"
+  "types": "Specializations.tsx",
+  "main": "Specializations.tsx"
 }

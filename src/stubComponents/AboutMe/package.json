@@ -1,3 +1,4 @@
 {
-  "main": "AboutMe.jsx"
+  "main": "AboutMe.tsx",
+  "types": "AboutMe.tsx"
 }

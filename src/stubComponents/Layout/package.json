@@ -1,3 +1,4 @@
 {
-  "main": "Layout.jsx"
+  "main": "Layout.tsx",
+  "types": "Layout.tsx"
 }

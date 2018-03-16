@@ -1,24 +1,24 @@
-import withStyles from 'HOC/withStyles';
-import Component from 'inferno-component';
-import bgJPG from 'static/bg.jpg';
-import bgPNG from 'static/bg.png';
-import Ava from 'stubComponents/Ava';
-import Contact from 'stubComponents/Contact';
-import Greeting from 'stubComponents/Greeting';
-import Icons from 'stubComponents/Icons';
-import executionEnvironment from 'utils/ExecutionEnvironment';
-import s from './Me.css';
+import withStyles from "isomorphic-style-loader/lib/withStyles";
+import React, {PureComponent} from "react";
+import bgJPG from "static/bg.jpg";
+import bgPNG from "static/bg.png";
+import Ava from "stubComponents/Ava";
+import Contact from "stubComponents/Contact";
+import Greeting from "stubComponents/Greeting";
+import Icons from "stubComponents/Icons";
+import executionEnvironment from "utils/ExecutionEnvironment";
+import s from "./Me.css";
 
-class Me extends Component {
-  rootEl = null;
+class Me extends PureComponent {
+  rootEl: HTMLElement | null = null;
 
-  setCSS (url) {
+  setCSS(url) {
     this.rootEl.style.cssText = `
          background: url(${url}) no-repeat 50%;
          background-size: cover;`;
   }
 
-  componentWillMount () {
+  componentWillMount() {
     if (executionEnvironment.canUseDOM) {
       const veryBabImg = new Image();
 
@@ -38,9 +38,9 @@ class Me extends Component {
     }
   }
 
-  render () {
+  render() {
     return (
-      <div ref={ (element) => this.rootEl = element } className={ s.root }>
+      <div ref={(element) => this.rootEl = element} className={s.root}>
         <div>
           <Ava/>
           <Greeting/>

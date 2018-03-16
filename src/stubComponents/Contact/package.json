@@ -1,3 +1,4 @@
 {
-  "main": "Contact.jsx"
+  "main": "Contact.tsx",
+  "types": "Contact.tsx"
 }

@@ -1,10 +1,10 @@
-import Component from 'inferno-component';
-import normalize from 'normalize.css';
-import propTypes from 'prop-types';
-import AboutMe from 'stubComponents/AboutMe';
-import Me from 'stubComponents/Me';
-import Layout from 'stubComponents/Layout';
-import s from './App.css';
+import normalize from "normalize.css";
+import propTypes from "prop-types";
+import React, {PureComponent} from "react";
+import AboutMe from "stubComponents/AboutMe";
+import Layout from "stubComponents/Layout";
+import Me from "stubComponents/Me";
+import s from "./App.css";
 
 const ContextType = {
   // Enables critical path CSS rendering
@@ -12,29 +12,31 @@ const ContextType = {
   insertCss: propTypes.func.isRequired,
 };
 
-class App extends Component {
+class App extends PureComponent<any, any> {
   static propTypes = {
     context: propTypes.shape(ContextType).isRequired,
   };
   static childContextTypes = ContextType;
 
-  componentWillMount () {
+  private removeCSS: () => void;
+
+  componentWillMount() {
     this.removeCSS = this.props.context.insertCss(normalize, s);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.removeCSS();
   }
 
-  getChildContext () {
+  getChildContext() {
     return this.props.context;
   }
 
-  render () {
+  render() {
     return (
       <Layout
-        introduce={ <Me/> }
-        about={ <AboutMe/> }
+        introduce={<Me/>}
+        about={<AboutMe/>}
       />
     );
   }

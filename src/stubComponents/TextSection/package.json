@@ -1,3 +1,4 @@
 {
-  "main": "TextSection.jsx"
+  "main": "TextSection.tsx",
+  "types": "TextSection.tsx"
 }
