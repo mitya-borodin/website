@@ -1,14 +1,14 @@
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import React, {PureComponent} from "react";
-import propTypes from "prop-types";
+import React, { PureComponent } from "react";
 import s from "./TextSection.css";
 
-class TextSection extends PureComponent<any, any> {
-  static propTypes = {
-    title: propTypes.string,
-    body: propTypes.string,
-  };
+interface IProps {
+  title: string;
+  body: string;
+}
 
+@withStyles( s )
+class TextSection extends PureComponent<IProps, any> {
   render() {
     const {
       title = "About Me",
@@ -18,12 +18,12 @@ class TextSection extends PureComponent<any, any> {
     } = this.props;
 
     return (
-      <section className={s.root}>
-        <h1>{title.toUpperCase()}</h1>
-        <p>{body}</p>
+      <section className={ s.root }>
+        <h1>{ title.toUpperCase() }</h1>
+        <p>{ body }</p>
       </section>
     );
   }
 }
 
-export default withStyles(s)(TextSection);
+export default TextSection;

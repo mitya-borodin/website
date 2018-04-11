@@ -28,6 +28,7 @@
 .letter {
   position: absolute;
   font-size: 48rem;
+  font-family: var(--font-family);
   font-weight: 500;
   color: var(--color-about-bg);
 }

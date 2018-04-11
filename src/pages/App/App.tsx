@@ -1,6 +1,6 @@
 import normalize from "normalize.css";
 import propTypes from "prop-types";
-import React, {PureComponent} from "react";
+import React, { PureComponent } from "react";
 import AboutMe from "stubComponents/AboutMe";
 import Layout from "stubComponents/Layout";
 import Me from "stubComponents/Me";
@@ -14,14 +14,14 @@ const ContextType = {
 
 class App extends PureComponent<any, any> {
   static propTypes = {
-    context: propTypes.shape(ContextType).isRequired,
+    context: propTypes.shape( ContextType ).isRequired,
   };
   static childContextTypes = ContextType;
 
   private removeCSS: () => void;
 
   componentWillMount() {
-    this.removeCSS = this.props.context.insertCss(normalize, s);
+    this.removeCSS = this.props.context.insertCss( normalize, s );
   }
 
   componentWillUnmount() {
@@ -35,8 +35,8 @@ class App extends PureComponent<any, any> {
   render() {
     return (
       <Layout
-        introduce={<Me/>}
-        about={<AboutMe/>}
+        introduce={ <Me/> }
+        about={ <AboutMe/> }
       />
     );
   }

@@ -1,6 +1,8 @@
 @import 'vars/index.css';
 
 .root {
+  display: block;
+  text-decoration: none;
   width: 235rem;
   height: 61rem;
   background-color: var(--color-blue);
@@ -8,6 +10,7 @@
   line-height: 61rem;
   text-align: center;
   font-size: 14rem;
+  font-family: var(--font-family);
   font-weight: 600;
   color: var(--color-about-bg);
   cursor: pointer;
@@ -21,7 +24,7 @@
 }
 
 @media (width >= 1024px) and (width < 1440px) {
-  .root > div {
+  .root > a {
     width: 500rem;
   }
 }
@@ -32,6 +35,7 @@
     height: 40rem;
     line-height: 40rem;
     font-size: 12rem;
+    font-family: var(--font-family);
     margin-left: calc(50% - 172rem / 2);
   }
 }

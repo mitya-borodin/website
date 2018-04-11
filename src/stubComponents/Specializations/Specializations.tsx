@@ -1,5 +1,5 @@
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import React, {PureComponent} from "react";
+import React, { PureComponent } from "react";
 import s from "./Specializations.css";
 
 const Specialization = (
@@ -11,25 +11,26 @@ const Specialization = (
       "Hybrid applications powered by Apache Cordova",
       "Mobile-applications powered by react-native",
       "SVG",
-      "WebGL"
-    ]
-  }
+      "WebGL",
+    ],
+  },
 ) => (
-  <div className={s.specialization}>
-    <div>{title.toUpperCase()}</div>
+  <div className={ s.specialization }>
+    <div>{ title.toUpperCase() }</div>
     <ul>
       {
-        li.map((val) => (<li key={val}><span>{val}</span></li>))
+        li.map( ( val ) => ( <li key={ val }><span>{ val }</span></li> ) )
       }
     </ul>
   </div>
 );
 
+@withStyles( s )
 class TextSection extends PureComponent<any, any> {
   render() {
     return (
-      <section className={s.root}>
-        <h1>{"Specializations".toUpperCase()}</h1>
+      <section className={ s.root }>
+        <h1>{ "Specializations".toUpperCase() }</h1>
         <div>
           <div className="blue">
             <Specialization/>
@@ -46,7 +47,7 @@ class TextSection extends PureComponent<any, any> {
                   "Integrations with other API",
                   "NoSQL database",
                   "DevOps",
-                  "Real time system (web socket)"
+                  "Real time system (web socket)",
                 ]
               }
             />
@@ -57,4 +58,4 @@ class TextSection extends PureComponent<any, any> {
   }
 }
 
-export default withStyles(s)(TextSection);
+export default TextSection;

@@ -7,6 +7,7 @@
 
 .root > h1 {
   font-size: 14rem;
+  font-family: var(--font-family);
   font-weight: 700;
   text-align: left;
   color: var(--color-text-section-h1);
@@ -15,6 +16,7 @@
 
 .root > p {
   font-size: 15rem;
+  font-family: var(--font-family);
   line-height: 1.6;
   color: var(--color-text-section-p);
 }

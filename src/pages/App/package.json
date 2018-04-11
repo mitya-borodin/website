@@ -1,6 +1,4 @@
 {
-  "name": "App",
   "main": "App.tsx",
-  "types": "App.tsx",
-  "private": true
+  "types": "App.tsx"
 }

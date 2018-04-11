@@ -9,6 +9,7 @@
 
 .font {
   font-size: 32rem;
+  font-family: var(--font-family);
   font-weight: 600;
   line-height: 52.0rem;
   text-align: center;
@@ -23,6 +24,7 @@
 .first > span {
   display: inline;
   font-size: 32rem;
+  font-family: var(--font-family);
   font-weight: 600;
   line-height: 52.0rem;
   text-align: center;
@@ -43,10 +45,12 @@
   }
   .font {
     font-size: 21rem;
+    font-family: var(--font-family);
     line-height: 32rem;
   }
   .first > span {
     font-size: 21rem;
+    font-family: var(--font-family);
     line-height: 32rem;
   }
 }
@@ -60,10 +64,12 @@
   }
   .font {
     font-size: 26rem;
+    font-family: var(--font-family);
     line-height: 40rem;
   }
   .first > span {
     font-size: 26rem;
+    font-family: var(--font-family);
     line-height: 40rem;
   }
 }

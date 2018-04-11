@@ -1,15 +1,16 @@
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import React, {PureComponent} from "react";
+import React, { PureComponent } from "react";
 import s from "./Contact.css";
 
+@withStyles( s )
 class Contact extends PureComponent {
   render() {
     return (
-      <div className={s.root}>
-        {"contact me now".toLocaleUpperCase()}
-      </div>
+      <a className={ s.root } type="email" href="mailto:dmitriy@borodin.site">
+        <span>{ "contact me now".toLocaleUpperCase() }</span>
+      </a>
     );
   }
 }
 
-export default withStyles(s)(Contact);
+export default Contact;

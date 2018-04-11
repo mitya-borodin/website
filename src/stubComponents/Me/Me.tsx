@@ -1,46 +1,54 @@
 import withStyles from "isomorphic-style-loader/lib/withStyles";
-import React, {PureComponent} from "react";
+import React, { PureComponent, RefObject } from "react";
 import bgJPG from "static/bg.jpg";
 import bgPNG from "static/bg.png";
 import Ava from "stubComponents/Ava";
 import Contact from "stubComponents/Contact";
 import Greeting from "stubComponents/Greeting";
 import Icons from "stubComponents/Icons";
-import executionEnvironment from "utils/ExecutionEnvironment";
 import s from "./Me.css";
 
+@withStyles( s )
 class Me extends PureComponent {
-  rootEl: HTMLElement | null = null;
+  rootHTML_EL: RefObject<HTMLDivElement>;
 
-  setCSS(url) {
-    this.rootEl.style.cssText = `
+  constructor( props ) {
+    super( props );
+
+    this.rootHTML_EL = React.createRef();
+  }
+
+  setCSS( url ) {
+    const node = this.rootHTML_EL.current;
+
+    if ( node ) {
+      node.style.cssText = `
          background: url(${url}) no-repeat 50%;
          background-size: cover;`;
+    }
   }
 
   componentWillMount() {
-    if (executionEnvironment.canUseDOM) {
-      const veryBabImg = new Image();
+    const img = new Image();
 
-      veryBabImg.src = bgJPG;
+    img.src = bgJPG;
 
-      veryBabImg.onload = () => {
-        this.setCSS(bgJPG);
+    img.onload = () => {
+      this.setCSS( bgJPG );
 
-        const goodImg = new Image();
+      const goodImg = new Image();
 
-        goodImg.src = bgPNG;
+      goodImg.src = bgPNG;
 
-        goodImg.onload = () => {
-          this.setCSS(bgPNG);
-        };
+      goodImg.onload = () => {
+        this.setCSS( bgPNG );
       };
-    }
+    };
   }
 
   render() {
     return (
-      <div ref={(element) => this.rootEl = element} className={s.root}>
+      <div ref={ this.rootHTML_EL } className={ s.root }>
         <div>
           <Ava/>
           <Greeting/>
@@ -52,4 +60,4 @@ class Me extends PureComponent {
   }
 }
 
-export default withStyles(s)(Me);
+export default Me;
