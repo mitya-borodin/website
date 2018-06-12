@@ -1,5 +1,7 @@
 .idea
 node_modules
 dist
+dll
+.DS_Store
 yarn.lock
 /socket.config.json
