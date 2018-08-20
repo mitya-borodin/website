@@ -8,52 +8,52 @@ import Greeting from "stubComponents/Greeting";
 import Icons from "stubComponents/Icons";
 import s from "./Me.css";
 
-@withStyles( s )
+@withStyles(s)
 class Me extends PureComponent {
-  rootHTML_EL: RefObject<HTMLDivElement>;
+  public rootHTML_EL: RefObject<HTMLDivElement>;
 
-  constructor( props ) {
-    super( props );
+  constructor(props) {
+    super(props);
 
     this.rootHTML_EL = React.createRef();
   }
 
-  setCSS( url ) {
+  public setCSS(url) {
     const node = this.rootHTML_EL.current;
 
-    if ( node ) {
+    if (node) {
       node.style.cssText = `
          background: url(${url}) no-repeat 50%;
          background-size: cover;`;
     }
   }
 
-  componentWillMount() {
+  public componentWillMount() {
     const img = new Image();
 
     img.src = bgJPG;
 
     img.onload = () => {
-      this.setCSS( bgJPG );
+      this.setCSS(bgJPG);
 
       const goodImg = new Image();
 
       goodImg.src = bgPNG;
 
       goodImg.onload = () => {
-        this.setCSS( bgPNG );
+        this.setCSS(bgPNG);
       };
     };
   }
 
-  render() {
+  public render() {
     return (
-      <div ref={ this.rootHTML_EL } className={ s.root }>
+      <div ref={this.rootHTML_EL} className={s.root}>
         <div>
-          <Ava/>
-          <Greeting/>
-          <Contact/>
-          <Icons/>
+          <Ava />
+          <Greeting />
+          <Contact />
+          <Icons />
         </div>
       </div>
     );

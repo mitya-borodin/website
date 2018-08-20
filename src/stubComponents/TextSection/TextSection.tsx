@@ -7,9 +7,9 @@ interface IProps {
   body: string;
 }
 
-@withStyles( s )
+@withStyles(s)
 class TextSection extends PureComponent<IProps, any> {
-  render() {
+  public render() {
     const {
       title = "About Me",
       body = `Hello! My name is Dmitry. I leave in Kazan, Russia (GMT +03:00)
@@ -18,9 +18,9 @@ class TextSection extends PureComponent<IProps, any> {
     } = this.props;
 
     return (
-      <section className={ s.root }>
-        <h1>{ title.toUpperCase() }</h1>
-        <p>{ body }</p>
+      <section className={s.root}>
+        <h1>{title.toUpperCase()}</h1>
+        <p>{body}</p>
       </section>
     );
   }

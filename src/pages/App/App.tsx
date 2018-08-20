@@ -13,32 +13,27 @@ const ContextType = {
 };
 
 class App extends PureComponent<any, any> {
-  static propTypes = {
-    context: propTypes.shape( ContextType ).isRequired,
+  public static propTypes = {
+    context: propTypes.shape(ContextType).isRequired,
   };
-  static childContextTypes = ContextType;
+  public static childContextTypes = ContextType;
 
   private removeCSS: () => void;
 
-  componentWillMount() {
-    this.removeCSS = this.props.context.insertCss( normalize, s );
+  public componentWillMount() {
+    this.removeCSS = this.props.context.insertCss(normalize, s);
   }
 
-  componentWillUnmount() {
+  public componentWillUnmount() {
     this.removeCSS();
   }
 
-  getChildContext() {
+  public getChildContext() {
     return this.props.context;
   }
 
-  render() {
-    return (
-      <Layout
-        introduce={ <Me/> }
-        about={ <AboutMe/> }
-      />
-    );
+  public render() {
+    return <Layout introduce={<Me />} about={<AboutMe />} />;
   }
 }
 

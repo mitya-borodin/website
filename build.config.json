@@ -5,9 +5,8 @@
     "path": "dist",
     "publicPath": "/"
   },
-  "modules": [
-    "src"
-  ],
+  "modules": ["src"],
+  "npmHardSync": [],
   "typescript": {
     "configPath": "tsconfig.json",
     "config": {
@@ -16,9 +15,8 @@
         "noImplicitAny": false,
         "noUnusedParameters": false,
         "strictPropertyInitialization": false,
-        "types": [
-          "node"
-        ]
+        "types": ["node"],
+        "paths": []
       },
       "compileOnSave": false
     }
