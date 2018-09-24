@@ -2,14 +2,14 @@ import withStyles from "isomorphic-style-loader/lib/withStyles";
 import React, { PureComponent, RefObject } from "react";
 import bgJPG from "static/bg.jpg";
 import bgPNG from "static/bg.png";
-import Ava from "stubComponents/Ava";
-import Contact from "stubComponents/Contact";
-import Greeting from "stubComponents/Greeting";
-import Icons from "stubComponents/Icons";
+import { Ava } from "../Ava/Ava";
+import { Contact } from "../Contact/Contact";
+import { Greeting } from "../Greeting/Greeting";
+import { Icons } from "../Icons/Icons";
 import s from "./Me.css";
 
 @withStyles(s)
-class Me extends PureComponent {
+export class Me extends PureComponent {
   public rootHTML_EL: RefObject<HTMLDivElement>;
 
   constructor(props) {
@@ -59,5 +59,3 @@ class Me extends PureComponent {
     );
   }
 }
-
-export default Me;

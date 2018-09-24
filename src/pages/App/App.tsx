@@ -1,9 +1,9 @@
+import { AboutMe } from "components/AboutMe/AboutMe";
+import { Layout } from "components/Layout/Layout";
+import { Me } from "components/Me/Me";
 import normalize from "normalize.css";
 import propTypes from "prop-types";
 import React, { PureComponent } from "react";
-import AboutMe from "stubComponents/AboutMe";
-import Layout from "stubComponents/Layout";
-import Me from "stubComponents/Me";
 import s from "./App.css";
 
 const ContextType = {
@@ -12,7 +12,7 @@ const ContextType = {
   insertCss: propTypes.func.isRequired,
 };
 
-class App extends PureComponent<any, any> {
+export class App extends PureComponent<any, any> {
   public static propTypes = {
     context: propTypes.shape(ContextType).isRequired,
   };
@@ -36,5 +36,3 @@ class App extends PureComponent<any, any> {
     return <Layout introduce={<Me />} about={<AboutMe />} />;
   }
 }
-
-export default App;

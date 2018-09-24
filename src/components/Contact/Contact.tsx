@@ -3,7 +3,7 @@ import React, { PureComponent } from "react";
 import s from "./Contact.css";
 
 @withStyles(s)
-class Contact extends PureComponent {
+export class Contact extends PureComponent {
   public render() {
     return (
       <a className={s.root} type="email" href="mailto:dmitriy@borodin.site">
@@ -12,5 +12,3 @@ class Contact extends PureComponent {
     );
   }
 }
-
-export default Contact;

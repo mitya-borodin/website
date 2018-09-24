@@ -26,12 +26,20 @@
 
 }
 
+.root > div > div:global(.purple) .specialization > div {
+  background-color: var(--color-purple);
+}
+
 .root > div > div:global(.blue) .specialization > div {
   background-color: var(--color-blue);
 }
 
 .root > div > div:global(.green) .specialization > div {
   background-color: var(--color-green);
+}
+
+.root > div > div:global(.purple) .specialization li {
+  color: var(--color-purple);
 }
 
 .root > div > div:global(.blue) .specialization li {

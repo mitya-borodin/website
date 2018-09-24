@@ -7,7 +7,7 @@ const curlyBracesLeft = "{";
 const curlyBracesRight = "}";
 
 @withStyles(s)
-class Ava extends PureComponent {
+export class Ava extends PureComponent {
   public img: RefObject<HTMLImageElement>;
 
   constructor(props) {
@@ -46,5 +46,3 @@ class Ava extends PureComponent {
     );
   }
 }
-
-export default Ava;

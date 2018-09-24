@@ -3,7 +3,7 @@ import React, { PureComponent } from "react";
 import s from "./Layout.css";
 
 @withStyles(s)
-class Layout extends PureComponent<any, any> {
+export class Layout extends PureComponent<any, any> {
   private htmlElement: HTMLElement | null = null;
 
   constructor(props, context) {
@@ -53,5 +53,3 @@ class Layout extends PureComponent<any, any> {
     );
   }
 }
-
-export default Layout;
