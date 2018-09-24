@@ -23,7 +23,18 @@ export class Specializations extends PureComponent<any, any> {
         <h1>{"Specializations".toUpperCase()}</h1>
         <div>
           <div className="purple">
-            <Specialization title="Main" li={["OOP", "SOLID", "Design patterns", "Typescript", "TSLint"]} />
+            <Specialization
+              title="Main"
+              li={[
+                "OOP",
+                "SOLID",
+                "Design patterns",
+                "Software design",
+                "Software architecture",
+                "Typescript",
+                "TSLint",
+              ]}
+            />
           </div>
           <div className="blue">
             <Specialization />
