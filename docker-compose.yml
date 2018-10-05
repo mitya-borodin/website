@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  personal-site:
+    image: borodindmitriy/borodin.site:1.0.9
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    expose:
+      - "80"
+      - "443"
+    environment:
+      - SERVER_NAME=borodin.site
+      - SERVER_HOST=localhost
+      - SERVER_PORT=10500
+      - WS_HOST=localhost
+      - WS_PORT=10501
+    command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
