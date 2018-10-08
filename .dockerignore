@@ -7,6 +7,7 @@ src
 .gitignore
 .editorconfig
 .npmrc
+.git
 build.config.json
 package.json
 postCssPlugins.js
