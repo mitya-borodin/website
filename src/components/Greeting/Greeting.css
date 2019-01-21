@@ -38,10 +38,10 @@
 
 @media (width < 1024px) {
   .root {
-    width: 297.4rem;
-    height: 96rem;
+    width: 300rem;
+    height: 100rem;
     margin-bottom: 35rem;
-    margin-left: calc(50% - 297.4rem / 2);
+    margin-left: calc(50% - 300rem / 2);
   }
   .font {
     font-size: 21rem;

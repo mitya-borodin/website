@@ -1,59 +1,37 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "allowJs": false,
-    "checkJs": false,
-    "target": "es6",
-    "module": "es6",
-    "pretty": true,
-    "lib": [
-      "es6",
-      "es7",
-      "dom"
-    ],
-    "jsx": "react",
-    "declaration": false,
-    "importHelpers": true,
-    "downlevelIteration": false,
-    "isolatedModules": false,
-    "allowSyntheticDefaultImports": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "noEmit": false,
-    "rootDir": "./",
-    "charset": "utf8",
-    "noErrorTruncation": true,
-    "diagnostics": false,
-    "sourceMap": false,
-    "strict": true,
-    "alwaysStrict": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": false,
-    "moduleResolution": "node",
     "baseUrl": "/Users/borodin_dmitriy/programming/personal-website/src",
-    "rootDirs": [],
-    "paths": {},
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "node"
-    ],
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true
+    "target": "es6",
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es6",
+      "DOM.Iterable",
+      "ScriptHost",
+      "es7"
+    ],
+    "module": "es6",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "noErrorTruncation": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "diagnostics": false,
+    "extendedDiagnostics": false,
+    "traceResolution": false,
+    "skipLibCheck": true
   },
   "exclude": [
     "node_modules",
-    "node_modules/.cache"
-  ],
-  "include": [
-    "/Users/borodin_dmitriy/programming/personal-website/src"
+    "/Users/borodin_dmitriy/programming/personal-website/dll_bundle",
+    "/Users/borodin_dmitriy/programming/personal-website/lib_bundle",
+    "/Users/borodin_dmitriy/programming/personal-website/lib"
   ]
 }

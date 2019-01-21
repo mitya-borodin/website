@@ -31,4 +31,7 @@
   .root > h1 {
     text-align: center;
   }
+  .root > p {
+    font-size: 17rem;
+  }
 }

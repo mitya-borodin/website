@@ -63,11 +63,17 @@ export class TechnologiesIUse extends PureComponent {
           <a target="_blank" href="https://www.npmjs.com/package/ws">
             {"WS"}
           </a>
+          <a target="_blank" href="https://www.docker.com/">
+            {"Docker"}
+          </a>
           <a target="_blank" href="https://mochajs.org/">
             {"Mocha, Chai, Sinon.js"}
           </a>
-          <a target="_blank" href="https://www.docker.com/">
-            {"Docker"}
+          <a target="_blank" href="https://airbnb.io/enzyme/">
+            {"Enzyme"}
+          </a>
+          <a target="_blank" href="https://webdriver.io/">
+            {"Webdriver.IO"}
           </a>
         </div>
       </section>
