@@ -1,4 +1,4 @@
-import withStyles from "isomorphic-style-loader/lib/withStyles";
+import withStyles from "isomorphic-style-loader/withStyles";
 import React, { PureComponent, RefObject } from "react";
 import bgJPG from "static/bg.jpg";
 import bgPNG from "static/bg.png";

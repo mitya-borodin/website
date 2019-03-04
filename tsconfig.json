@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "/Users/borodin_dmitriy/programming/personal-website/src",
+    "baseUrl": "/Users/borodin/programming/personal-website/src",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "target": "es6",
@@ -30,8 +30,8 @@
   },
   "exclude": [
     "node_modules",
-    "/Users/borodin_dmitriy/programming/personal-website/dll_bundle",
-    "/Users/borodin_dmitriy/programming/personal-website/lib_bundle",
-    "/Users/borodin_dmitriy/programming/personal-website/lib"
+    "/Users/borodin/programming/personal-website/dll_bundle",
+    "/Users/borodin/programming/personal-website/lib_bundle",
+    "/Users/borodin/programming/personal-website/lib"
   ]
 }

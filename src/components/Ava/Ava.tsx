@@ -1,4 +1,4 @@
-import withStyles from "isomorphic-style-loader/lib/withStyles";
+import withStyles from "isomorphic-style-loader/withStyles";
 import React, { PureComponent, RefObject } from "react";
 import avaJPG from "static/ava.jpg";
 import s from "./Ava.css";

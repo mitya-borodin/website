@@ -1,4 +1,4 @@
-import withStyles from "isomorphic-style-loader/lib/withStyles";
+import withStyles from "isomorphic-style-loader/withStyles";
 import React, { PureComponent } from "react";
 import s from "./Contact.css";
 

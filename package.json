@@ -16,9 +16,9 @@
     "dll_bundle"
   ],
   "scripts": {
-    "build": "rearguard build  --project",
-    "build:both": "rearguard build --both  --project",
-    "build:release": "rearguard build -r  --project",
+    "build": "rearguard build --application",
+    "build:both": "rearguard build --both --application",
+    "build:release": "rearguard build -r --application",
     "check_deps_on_npm": "rearguard check_deps_on_npm",
     "check_deps_on_npm:install": "rearguard check_deps_on_npm --install_deps",
     "dll": "rearguard build --dll",
@@ -28,24 +28,23 @@
     "start:release": "rearguard wds -r"
   },
   "dependencies": {
-    "isomorphic-style-loader": "4.0.0",
+    "isomorphic-style-loader": "5.0.1",
     "normalize.css": "8.0.1",
     "pretty-error": "2.1.1",
-    "prop-types": "15.6.2",
-    "react": "16.7.0",
-    "react-dom": "16.7.0",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
     "tslib": "1.9.3"
   },
   "devDependencies": {
-    "@types/node": "10.12.18",
-    "@types/prop-types": "15.5.8",
-    "@types/react": "16.7.20",
-    "@types/react-dom": "16.0.11",
-    "@types/webpack": "4.4.23",
-    "postcss-css-variables": "0.11.0",
-    "tslint": "5.12.1",
+    "@types/node": "11.10.4",
+    "@types/prop-types": "15.7.0",
+    "@types/react": "16.8.6",
+    "@types/react-dom": "16.8.2",
+    "@types/webpack": "4.4.25",
+    "postcss-css-variables": "0.12.0",
+    "tslint": "5.13.1",
     "tslint-no-circular-imports": "0.6.1",
-    "typescript": "3.2.4"
+    "typescript": "3.3.3"
   },
   "engines": {
     "node": ">=10",
@@ -66,7 +65,7 @@
     "has_dll": true,
     "has_browser_lib": false,
     "load_on_demand": false,
-    "has_project": true,
+    "is_application": true,
     "has_node_lib": false,
     "publish_in_git": false
   }
