@@ -13,3 +13,4 @@ src/typings.d.ts
 .npmrc
 pre_publish.sh
 pre_publish_build_tmp
+build/ssl
