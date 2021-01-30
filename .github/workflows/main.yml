@@ -1,0 +1,70 @@
+name: CI
+on: [push]
+jobs:
+  docker_validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Begin CI...
+        uses: actions/checkout@v2
+
+      - name: Build image
+        run: docker build -t borodindmitriy/site -f ./packages/frontend/Dockerfile.dev ./packages/frontend
+
+      - name: Checking code formatting
+        run: docker run borodindmitriy/site npm run fmt
+
+      - name: Linting code
+        run: docker run borodindmitriy/site npm run lint
+
+      - name: Testing code
+        run: docker run borodindmitriy/site npm run test
+
+      - name: Build code
+        run: docker run borodindmitriy/site npm run build
+
+      - name: Publish code
+        run: docker push borodindmitriy/site
+
+  nodejs_validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Begin CI...
+        uses: actions/checkout@v2
+
+      - name: Use Node 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.15.x
+
+      - name: Use cached node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: nodeModules-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            nodeModules-
+
+      - name: Install dependencies
+        run: npm install --frozen-lockfile
+        env:
+          CI: true
+
+      - name: Prettier
+        run: npm run fmt
+        env:
+          CI: true
+
+      - name: Lint
+        run: npm run lint
+        env:
+          CI: true
+
+      - name: Test
+        run: npm run test
+        env:
+          CI: true
+
+      - name: Build
+        run: npm run build
+        env:
+          CI: true

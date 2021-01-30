@@ -1,37 +1,27 @@
 {
-  "compileOnSave": false,
+  "include": ["src", "types"],
   "compilerOptions": {
-    "baseUrl": "/Users/borodin/programming/personal-website/src",
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "target": "es6",
-    "jsx": "react",
-    "lib": [
-      "dom",
-      "es6",
-      "DOM.Iterable",
-      "ScriptHost",
-      "es7"
-    ],
-    "module": "es6",
+    "module": "esnext",
+    "target": "esnext",
     "moduleResolution": "node",
-    "importHelpers": true,
-    "noErrorTruncation": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
+    /* paths - import rewriting/resolving */
+    "paths": {
+      // If you configured any Snowpack aliases, add them here.
+      // Add this line to get types for streaming imports (packageOptions.source="remote"):
+      //     "*": [".snowpack/types/*"]
+      // More info: https://www.snowpack.dev/guides/streaming-imports
+    },
+    /* noEmit - Snowpack builds (emits) files, not tsc. */
+    "noEmit": true,
+    /* Additional Options */
     "strict": true,
-    "noImplicitReturns": true,
-    "noImplicitAny": false,
-    "strictPropertyInitialization": false,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "diagnostics": false,
-    "extendedDiagnostics": false,
-    "traceResolution": false,
-    "skipLibCheck": true
-  },
-  "exclude": [
-    "node_modules",
-    "/Users/borodin/programming/personal-website/dll_bundle",
-    "/Users/borodin/programming/personal-website/lib_bundle",
-    "/Users/borodin/programming/personal-website/lib"
-  ]
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "importsNotUsedAsValues": "error"
+  }
 }
