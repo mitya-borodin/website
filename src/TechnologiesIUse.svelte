@@ -16,7 +16,6 @@
     <a target="_blank" href="https://www.w3.org/Style/CSS/specs.ru.html"> {"CSS3"} </a>
     <a target="_blank" href="https://stylelint.io/"> {"Stylelint"} </a>
     <a target="_blank" href="https://www.typescriptlang.org/"> {"Typescript"} </a>
-    <a target="_blank" href="https://palantir.github.io/tslint/"> {"TSlint"} </a>
     <a target="_blank" href="https://facebook.github.io/react/"> {"React"} </a>
     <a target="_blank" href="https://mobx.js.org/"> {"Mobx"} </a>
     <a target="_blank" href="https://facebook.github.io/react-native/"> {"React Native"} </a>

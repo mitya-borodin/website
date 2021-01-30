@@ -2,6 +2,13 @@
   import Specializations from "./Specializations.svelte";
   import TechnologiesIUse from "./TechnologiesIUse.svelte";
   import TextSection from "./TextSection.svelte";
+
+  const workSince = new Date();
+  const now = new Date();
+
+  workSince.setFullYear(2013);
+  workSince.setMonth(8);
+  workSince.setUTCDate(1);
 </script>
 
 <div class="root">
@@ -10,7 +17,9 @@
       title={"About Me"}
       body={[
         `Hello, my name is Borodin Dmitriy and I am open-minded and hardworking software engineer.
-        I have been developing software for 5+ years.
+        I have been developing software for ${
+          now.getFullYear() - workSince.getFullYear() - 1
+        }+ years.
         I live in the time zone of Moscow (GMT +03:00), and I like to work remotely,
         but I do not mind working in the office if the road does not take more than 30 minutes.`,
       ]}

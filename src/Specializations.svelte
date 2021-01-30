@@ -5,27 +5,45 @@
 <section class="root">
   <h1>{"Specializations".toUpperCase()}</h1>
   <div>
-    <div className="purple">
+    <div>
       <Specialization
         title="Main"
         li={[
+          "DDD",
           "OOP",
           "SOLID",
+          "YAGNI",
+          "DRY",
+          "KISS",
           "Design patterns",
           "Software design",
           "Software architecture",
           "Typescript",
-          "TSLint",
+          "RTCTS",
         ]}
+        color="purple"
       />
     </div>
-    <div className="blue">
-      <Specialization />
+    <div>
+      <Specialization color="blue" />
     </div>
-    <div className="green">
+    <div>
       <Specialization
-        title="back-end"
-        li={["Node.js", "Real time system", "Message Queuing", "MongoDB", "Docker"]}
+        title="Back-end"
+        li={[
+          "Node.js",
+          "Koa",
+          "Express",
+          "Nest.js",
+          "Real time apps",
+          "Message Queuing",
+          "MongoDB",
+          "Docker",
+          "Kubernetes",
+          "Helm",
+          "Terraform",
+        ]}
+        color="green"
       />
     </div>
   </div>
