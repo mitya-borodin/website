@@ -1,7 +1,7 @@
 name: CI
 on: [push]
 jobs:
-  CI_in_ubuntu:
+  CI:
     runs-on: ubuntu-latest
     steps:
       - name: Begin CI...
@@ -44,28 +44,6 @@ jobs:
         run: npm run build
         env:
           CI: true
-
-  CI_in_docker:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Begin CI...
-        uses: actions/checkout@v2
-
-      - name: Build image
-        run: docker build -t borodindmitriy/borodin.site -f ./Dockerfile.dev .
-
-      - name: Checking code formatting
-        run: docker run borodindmitriy/borodin.site npm run fmt
-
-      - name: Linting code
-        run: docker run borodindmitriy/borodin.site npm run lint
-
-      - name: Testing code
-        run: docker run borodindmitriy/borodin.site npm run test
-
-      - name: Build code
-        run: docker run borodindmitriy/borodin.site npm run build
-
 
   CD:
     runs-on: ubuntu-latest
