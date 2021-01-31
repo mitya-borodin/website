@@ -54,5 +54,8 @@ jobs:
       - name: Build image
         run: docker build -t borodindmitriy/borodin.site .
 
+      - name: Login to docker hub
+        run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
       - name: Publish code
         run: docker push borodindmitriy/borodin.site
