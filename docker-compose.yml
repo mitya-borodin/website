@@ -1,0 +1,50 @@
+version: '3'
+services:
+  nginx:
+    build: .
+    image: umputun/nginx-le:latest
+    hostname: nginx
+    restart: always
+    container_name: nginx
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+    volumes:
+       - ./etc/ssl:/etc/nginx/ssl
+       - ./etc/service-borodin.site.conf:/etc/nginx/service.conf
+    ports:
+       - "80:80"
+       - "443:443"
+
+    environment:
+      - TZ=UTC
+      - LETSENCRYPT=true
+      - LE_EMAIL=dmitriy@borodin.site
+      - LE_FQDN=borodin.site
+      #- SSL_CERT=le-crt.pem
+      #- SSL_KEY=le-key.pem
+      #- SSL_CHAIN_CERT=le-chain-crt.pem
+
+  personal-site:
+    image: borodindmitriy/borodin.site
+    restart: always
+    ports:
+      - "127.0.0.1:3000:3000"
+    expose:
+      - "3000"
+
+  ipsec-vpn-server:
+    image: hwdsl2/ipsec-vpn-server
+    restart: always
+    privileged: true
+    ports:
+      - "500:500/udp"
+      - "4500:4500/udp"
+    expose:
+      - "500/udp"
+      - "4500/udp"
+    volumes:
+      - "/lib/modules:/lib/modules:ro"
+      - "../vpn.env:/opt/src/vpn.env:ro"
