@@ -58,4 +58,4 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_ID }}" --password-stdin
 
       - name: Publish code
-        run: docker push borodindmitriy/borodin.site:"${{ env.GITHUB_SHA }}"
+        run: docker push borodindmitriy/borodin.site:$GITHUB_SHA
