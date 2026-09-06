@@ -1,18 +1,21 @@
-FROM node:lts-alpine
+FROM node:16.20.2-alpine AS builder
 
 LABEL maintainer="dmitriy@borodin.site"
 
-WORKDIR '/app'
+WORKDIR '/tmp'
 
 COPY ./package.json ./
 COPY ./package-lock.json ./
-RUN npm install
+RUN npm ci
 
 COPY ./ ./
 
 RUN npm run build
 
 FROM nginx:alpine
-EXPOSE 3000
-COPY --from=0 /app/build /usr/share/nginx/html
+
+COPY --from=builder /tmp/build /usr/share/nginx/html
+
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 3000

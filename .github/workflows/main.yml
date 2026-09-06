@@ -5,23 +5,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Begin CI...
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Use Node 14
-        uses: actions/setup-node@v1
+      - name: Use Node 16
+        uses: actions/setup-node@v4
         with:
-          node-version: 14.15.x
-
-      - name: Use cached node_modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            nodeModules-
+          node-version: 16.20.2
+          cache: npm
 
       - name: Install dependencies
-        run: npm install --frozen-lockfile
+        run: npm ci
         env:
           CI: true
 
@@ -46,10 +39,11 @@ jobs:
           CI: true
 
   CD:
+    needs: CI
     runs-on: ubuntu-latest
     steps:
       - name: Begin CI...
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Build image
         run: docker build -t borodindmitriy/borodin.site:$GITHUB_SHA .
