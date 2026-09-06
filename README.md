@@ -2,6 +2,12 @@
 
 [borodin.site](https://borodin.site)
 
+## How to deploy
+
+1. Setup [nginx-le](https://github.com/nginx-le/nginx-le)
+1. Replace their [docker-compose.yml](https://github.com/nginx-le/nginx-le/blob/master/docker-compose.yml) to our [docker-compose.yml](https://github.com/mitya-borodin/personal-website/blob/master/docker-compose.yml)
+1. docker-compose up -d
+
 ## Available Scripts
 
 ### npm start
