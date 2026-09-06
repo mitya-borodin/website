@@ -1,6 +1,6 @@
 <div class="root">
   <span class="first"> {"I’m "} <span>{"Dmitriy Borodin"}</span> </span>
-  <span class="second">{"Full-stack developer by Typescript"}</span>
+  <span class="second">{"Senior Full-stack Developer"}</span>
 </div>
 
 <style lang="css">

@@ -7,41 +7,49 @@
   <div>
     <div>
       <Specialization
-        title="Main"
+        title="Architecture"
         li={[
           "DDD",
-          "OOP",
-          "SOLID",
-          "YAGNI",
-          "DRY",
-          "KISS",
-          "Design patterns",
-          "Software design",
-          "Software architecture",
-          "Typescript",
-          "RTCTS",
+          "Hexagonal architecture",
+          "Distributed systems",
+          "Event-driven systems",
+          "Offline-first",
+          "Schema-driven UI",
+          "AI-assisted delivery",
         ]}
         color="purple"
       />
     </div>
     <div>
-      <Specialization color="blue" />
+      <Specialization
+        title="Front-end"
+        li={[
+          "React",
+          "TypeScript",
+          "MobX",
+          "Apollo Client",
+          "Vite",
+          "Storybook",
+          "Playwright",
+        ]}
+        color="blue"
+      />
     </div>
     <div>
       <Specialization
         title="Back-end"
         li={[
           "Node.js",
-          "Koa",
-          "Express",
-          "Nest.js",
-          "Real time apps",
-          "Message Queuing",
-          "MongoDB",
+          "Fastify",
+          "GraphQL",
+          "gRPC",
+          "PostgreSQL",
+          "Redis",
+          "MQTT",
+          "Kafka",
+          "Rust",
           "Docker",
           "Kubernetes",
-          "Helm",
-          "Terraform",
         ]}
         color="green"
       />
@@ -71,7 +79,7 @@
   }
 
   .root > div > div {
-    width: 50%;
+    width: 33.333%;
   }
 
   @media (width < 1024px) {

@@ -1,14 +1,6 @@
 <script lang="typescript">
-  export let title: string = "front-end";
-  export let li: string[] = [
-    "React",
-    "React Native",
-    "Svelte",
-    "Mobx",
-    "Corodva",
-    "Snowpack",
-    "Webpack",
-  ];
+  export let title: string = "";
+  export let li: string[] = [];
   export let color: "purple" | "blue" | "green" = "green";
 </script>
 

@@ -3,12 +3,13 @@
   import TechnologiesIUse from "./TechnologiesIUse.svelte";
   import TextSection from "./TextSection.svelte";
 
-  const workSince = new Date();
+  const workSince = new Date(2013, 8, 1);
   const now = new Date();
-
-  workSince.setFullYear(2013);
-  workSince.setMonth(8);
-  workSince.setUTCDate(1);
+  const hasReachedWorkAnniversary =
+    now.getMonth() > workSince.getMonth() ||
+    (now.getMonth() === workSince.getMonth() && now.getDate() >= workSince.getDate());
+  const yearsOfExperience =
+    now.getFullYear() - workSince.getFullYear() - (hasReachedWorkAnniversary ? 0 : 1);
 </script>
 
 <div class="root">
@@ -16,40 +17,36 @@
     <TextSection
       title={"About Me"}
       body={[
-        `Hello, my name is Borodin Dmitriy and I am open-minded and hardworking software engineer.
-        I have been developing software for ${
-          now.getFullYear() - workSince.getFullYear() - 1
-        }+ years.
-        I live in the time zone of Moscow (GMT +03:00), and I like to work remotely,
-        but I do not mind working in the office if the road does not take more than 30 minutes.`,
+        `I am a Senior Full-stack Developer with ${yearsOfExperience}+ years of commercial software
+        engineering experience. I design and build production systems with TypeScript and Node.js
+        across backend, frontend, distributed services, databases, CI/CD, and infrastructure.`,
+        `I take ownership of the full engineering lifecycle: discovery, architecture, implementation,
+        code review, automated testing, delivery, observability, and production support. I am based
+        in Kazan, Russia (UTC+3), and I am interested in remote Senior Full-stack Developer roles.`,
       ]}
     />
     <Specializations />
     <TechnologiesIUse />
     <TextSection
-      title={"The area of my work involves"}
+      title={"Current focus"}
       body={[
-        `Solving business problems by means of programming.
-        I create full-fledged multi-user cross-platform solutions that work in real time using WEB
-        and DevOps technologies.`,
+        `Since 2022, I have been building Module, an offline-first building-automation platform.
+        It combines a TypeScript and Node.js controller runtime, a schema-driven React interface,
+        a cloud control plane, and an automated Installer and Agent update pipeline.`,
+        `The production installation manages more than 120 physical devices and runs 78 automation
+        instances. I also use AI agents throughout the engineering lifecycle and build tooling for
+        reproducible, verifiable AI-assisted delivery.`,
       ]}
     />
     <TextSection
-      title={"My experience"}
+      title={"Selected impact"}
       body={[
-        `I am sure that the creation of an understandable and predictable system based on principles and templates
-           of programming makes it possible to effectively separate work between people, keep the growth
-            of the complexity of the system at one level, and also maintain maintainability.`,
-        `I allocate the code which can be used repeatedly in separate npm packages and connect as dependencies.`,
-        ` I believe that adhere to principles of architectural is more important than a concrete implementation,
-           because making local fixes is easier than fixe an architecture error.`,
-        `In conditions of insufficient time, I give priority to solving the problem in any accessible way,
-           but at the next stage of development I will perform the refactoring of the solution.`,
-        `To achieve success in the team, first of all you need to agree on the rules of the game.`,
-        `Can to recognize unsuccessful decisions and mistakes, take them and gain experience.`,
-        `Premature automation is harmful, but timely automation significantly saves time.`,
-        `If you need a lot of time to learn technology, you need to hire a specialist who already knows the
-           technology.`,
+        `Migrated 13 microservices from ICE to gRPC without production downtime or major incidents.`,
+        `Built a payment platform that sustained up to 5,000 payments per minute in load testing.`,
+        `Developed enterprise systems handling data for up to 300,000 employees and report archives
+        up to 3–4 GB.`,
+        `Created TypeScript tools that validate Figma contracts and verify implementations through
+        Storybook, Playwright, and CI.`,
       ]}
     />
   </div>

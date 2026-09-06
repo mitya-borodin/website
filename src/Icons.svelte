@@ -2,7 +2,6 @@
   import github from "./static/icons/Github_White.svg";
   import linkedIN from "./static/icons/LinkedIN_White.svg";
   import moikrug from "./static/icons/moikrug_White.svg";
-  import skype from "./static/icons/Skype_White.svg";
   import telegram from "./static/icons/Telegram_White.svg";
   import whatsapp from "./static/icons/whatsapp_White.svg";
 </script>
@@ -11,7 +10,6 @@
   <a href="https://api.whatsapp.com/send?phone=79046762007" target={"_blank"}>
     <img src={whatsapp} alt="whatsapp" />
   </a>
-  <a href="skype:live:dmitriy_433?chat" target={"_blank"}> <img src={skype} alt="skype" /> </a>
   <a href="https://telegram.me/MityaBorodin" target={"_blank"}>
     <img src={telegram} alt="telegram" />
   </a>
